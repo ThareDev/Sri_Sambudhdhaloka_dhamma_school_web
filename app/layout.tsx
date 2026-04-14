@@ -52,8 +52,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#4A1D1D",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",

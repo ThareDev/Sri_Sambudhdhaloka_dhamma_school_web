@@ -31,10 +31,10 @@ export default function ContactSection() {
                         <div className="reveal space-y-6">
                             <div className="border-gold-glow rounded-2xl p-8 bg-maroon-800/40 space-y-6">
                                 {[
-                                    { icon: '📍', label: 'Address', value: 'Sri Sambuddhaloka Temple,\nKahathuduwa, western Province,\nSri Lanka.' },
+                                    { icon: '📍', label: 'Address', value: 'Sri Sambuddhaloka Temple,\nKahathuduwa, Western Province,\nSri Lanka.' },
                                     { icon: '📞', label: 'Telephone', value: '+94 XX XXX XXXX' },
                                     { icon: '📧', label: 'Email', value: 'info@srisambuddhaloka.lk' },
-                                    { icon: '🕐', label: 'Dhamma School Hours', value: 'Saturday & Sunday\n8:00 AM – 12:00 Noon' },
+                                    { icon: '🕐', label: 'Dhamma School Hours', value: 'Sunday\n8:30 AM – 11:00 AM' },
                                 ].map((c, i) => (
                                     <div key={i} className="flex gap-4 pb-6 border-b border-gold-400/10 last:border-0 last:pb-0">
                                         <div className="w-10 h-10 rounded-full bg-gold-400/10 border border-gold-400/25 flex items-center justify-center flex-shrink-0 mt-1">
@@ -48,9 +48,9 @@ export default function ContactSection() {
                                 ))}
                             </div>
 
-                            {/* Dhamma quote */}
+                            {/* Dhamma quote - FIXED: escaped quotes */}
                             <div className="text-center py-6">
-                                <p className="font-sinhala text-gold-300/60 text-lg italic">" සෙවිතබ්බෝ ච ධම්මෝ "</p>
+                                <p className="font-sinhala text-gold-300/60 text-lg italic">&quot; සෙවිතබ්බෝ ච ධම්මෝ &quot;</p>
                                 <p className="font-serif text-cream-300/40 text-sm mt-2">May all beings be well and happy</p>
                             </div>
                         </div>
@@ -92,7 +92,7 @@ export default function ContactSection() {
                 </div>
             </section>
 
-            {/* Footer */}
+            {/* Footer - UPDATED with correct navigation links */}
             <footer className="relative py-12 bg-maroon-900 border-t border-gold-400/10">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center space-y-6">
@@ -109,20 +109,36 @@ export default function ContactSection() {
                             </div>
                         </div>
 
-                        {/* Motto */}
-                        <p className="font-sinhala text-gold-400/60 text-lg">" මානිවත්ථ අභික්ඛම "</p>
+                        {/* Motto - FIXED: escaped quotes */}
+                        <p className="font-sinhala text-gold-400/60 text-lg">&quot; මානිවත්ථ අභික්ඛම &quot;</p>
 
-                        {/* Nav links */}
+                        {/* Nav links - UPDATED with correct sections */}
                         <div className="flex flex-wrap justify-center gap-6">
-                            {['Home', 'Temple', 'Head Thero', 'Alumni', 'Gallery', 'Media Unit', 'Contact'].map(link => (
-                                <a
-                                    key={link}
-                                    href={`#${link.toLowerCase().replace(' ', '-')}`}
-                                    className="font-sans text-xs tracking-widest text-cream-300/50 hover:text-gold-300 transition-colors uppercase"
-                                >
-                                    {link}
-                                </a>
-                            ))}
+                            {[
+                                'Home', 'Temple', 'Head Thero', 'Dhamma Principal', 'Dhamma School', 'Gallery', 'Contact'
+                            ].map(link => {
+                                // Convert link to href format
+                                let href = '#'
+                                switch(link.toLowerCase()) {
+                                    case 'home': href = '#home'; break
+                                    case 'temple': href = '#temple'; break
+                                    case 'head thero': href = '#thero'; break
+                                    case 'dhamma principal': href = '#deputy-thero'; break
+                                    case 'dhamma school': href = '#dhamma-school'; break
+                                    case 'gallery': href = '#portfolio'; break
+                                    case 'contact': href = '#contact'; break
+                                    default: href = '#'
+                                }
+                                return (
+                                    <a
+                                        key={link}
+                                        href={href}
+                                        className="font-sans text-xs tracking-widest text-cream-300/50 hover:text-gold-300 transition-colors uppercase"
+                                    >
+                                        {link}
+                                    </a>
+                                )
+                            })}
                         </div>
 
                         <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold-400/40 to-transparent mx-auto" />

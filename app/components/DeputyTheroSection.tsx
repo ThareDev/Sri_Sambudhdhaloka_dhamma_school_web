@@ -103,13 +103,13 @@ export default function DeputyTheroSection() {
               </p>
             </div>
 
-            {/* Legacy connection quote */}
+            {/* Legacy connection quote - FIXED: escaped quotes */}
             <div className="reveal relative pl-8 py-4 border-l-4 border-gold-400/40 bg-maroon-700/20 rounded-r-2xl">
               <div className="absolute -left-3 top-4 w-6 h-6 rounded-full bg-gold-400/80 flex items-center justify-center">
                 <span className="text-maroon-800 text-xs font-bold">†</span>
               </div>
               <p className="font-serif italic text-gold-200/80 text-lg leading-relaxed">
-                "The true measure of a teacher's legacy is seen in the student who carries forward the light. Ven Indasara Thero is that radiant torch-bearer."
+                &quot;The true measure of a teacher&apos;s legacy is seen in the student who carries forward the light. Ven Indasara Thero is that radiant torch-bearer.&quot;
               </p>
               <p className="font-sans text-xs tracking-widest text-gold-400/50 mt-3 uppercase">— From the Dhamma School Community</p>
             </div>
@@ -127,12 +127,12 @@ export default function DeputyTheroSection() {
               ))}
             </div>
 
-            {/* Achievement highlight */}
+            {/* Achievement highlight - FIXED: escaped apostrophe */}
             <div className="reveal">
               <div className="bg-gradient-to-r from-gold-400/5 via-gold-400/10 to-gold-400/5 rounded-2xl p-5 border border-gold-400/15 text-center">
                 <p className="font-sans text-xs tracking-widest text-gold-400 uppercase mb-2">🏆 Notable Achievement</p>
                 <p className="font-serif text-cream-200 text-md leading-relaxed">
-                  Under Ven Indasara Thero's guidance, the Dhamma School has been recognized as one of the <span className="text-gold-300 font-semibold">top Dhamma schools in Udagahapaththuwa Balamandalaya</span>, setting new standards for religious education.
+                  Under Ven Indasara Thero&apos;s guidance, the Dhamma School has been recognized as one of the <span className="text-gold-300 font-semibold">top Dhamma schools in Udagahapaththuwa Balamandalaya</span>, setting new standards for religious education.
                 </p>
               </div>
             </div>

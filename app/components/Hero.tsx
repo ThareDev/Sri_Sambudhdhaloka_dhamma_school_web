@@ -122,9 +122,9 @@ export default function Hero() {
                     Dhamma School
                 </h3>
 
-                {/* Motto */}
+                {/* Motto - FIXED: escaped quotes */}
                 <div className={`lotus-divider mb-6 transition-all duration-700 delay-600 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
-                    <p className="font-sinhala text-gold-400 text-xl tracking-wide px-4">" මානිවත්ථ අභික්ඛම  "</p>
+                    <p className="font-sinhala text-gold-400 text-xl tracking-wide px-4">&quot; මානිවත්ථ අභික්ඛම &quot;</p>
                 </div>
 
                 {/* Tagline */}

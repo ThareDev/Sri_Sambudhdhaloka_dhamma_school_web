@@ -84,7 +84,7 @@ export default function TheroSection() {
                 <em className="text-gold-300">Thousands of Enlightened Lives</em>
               </h3>
               <p className="font-serif text-cream-300/80 text-lg leading-loose mb-4">
-                The Venerable Vitiyala Indasiri Thero, Head Thero of Sri Sambuddhaloka Temple, stands as the founding architect of one of Sri Lanka's most impactful Dhamma education programmes. With unwavering dedication, compassionate wisdom, and a profound vision for Buddhist education, he has single-handedly shaped the moral and spiritual foundation of countless young lives.
+                The Venerable Vitiyala Indasiri Thero, Head Thero of Sri Sambuddhaloka Temple, stands as the founding architect of one of Sri Lanka&apos;s most impactful Dhamma education programmes. With unwavering dedication, compassionate wisdom, and a profound vision for Buddhist education, he has single-handedly shaped the moral and spiritual foundation of countless young lives.
               </p>
               <p className="font-serif text-cream-300/80 text-lg leading-loose mb-4">
                 Under his inspired leadership, the Dhamma School grew from humble beginnings into a celebrated institution whose alumni now serve as doctors, engineers, lawyers, teachers, and community leaders across Sri Lanka and in countries spanning every continent. He saw in every child not just a student, but a potential bodhisattva for the world.
@@ -127,10 +127,10 @@ export default function TheroSection() {
               ))}
             </div>
 
-            {/* Quote - UPDATED */}
+            {/* Quote - FIXED: escaped double quote */}
             <div className="reveal relative pl-8 py-4 border-l-4 border-gold-400/50 bg-maroon-700/20 rounded-r-2xl">
               <div className="absolute -left-3 top-4 w-6 h-6 rounded-full bg-gold-400 flex items-center justify-center">
-                <span className="text-maroon-800 text-xs font-bold">"</span>
+                <span className="text-maroon-800 text-xs font-bold">&quot;</span>
               </div>
               <p className="font-serif italic text-gold-200 text-xl leading-relaxed">
                 Education of the mind without education of the heart is no education at all. Dhamma is the education of the heart.

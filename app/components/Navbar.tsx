@@ -7,16 +7,15 @@ const navLinks = [
   { href: '#home',           label: 'Home' },
   { href: '#temple',         label: 'Temple' },
   { href: '#thero',          label: 'Head Thero' },
-  { href: '#deputy-thero',   label: 'Dhamma Principal' },  // Updated
-  { href: '#dhamma-school',  label: 'Dhamma School' },      // New
+  { href: '#deputy-thero',   label: 'Dhamma Principal' },
+  { href: '#dhamma-school',  label: 'Dhamma School' },
   { href: '#portfolio',      label: 'Gallery' },
   { href: '#contact',        label: 'Contact' },
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled]   = useState(false)
-  const [menuOpen, setMenuOpen]   = useState(false)
-  const [active, setActive]       = useState('home')
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)

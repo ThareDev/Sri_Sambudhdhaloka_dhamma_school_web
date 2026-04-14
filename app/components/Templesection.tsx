@@ -23,9 +23,8 @@ export default function TempleSection() {
         return () => observer.disconnect()
     }, [])
 
-    // Replace with your actual YouTube video ID
-    const youtubeVideoId = "6pWEVTOjtZ0" //
-    const youtubeThumbnail = `https://img.youtube.com/vi/${youtubeVideoId}/maxresdefault.jpg`
+    // YouTube video ID (youtubeThumbnail removed - not being used)
+    const youtubeVideoId = "6pWEVTOjtZ0"
 
     return (
         <section id="temple" ref={sectionRef} className="relative py-32 bg-gradient-to-b from-maroon-900 via-maroon-800 to-maroon-900 overflow-hidden">
@@ -88,13 +87,13 @@ export default function TempleSection() {
                             The temple stands as more than a place of worship — it is a living institution of Dhamma education, cultural preservation, and community service. Under the compassionate guidance of its resident monastics, the temple continues to radiate the light of wisdom to all who seek it.
                         </p>
                         <p className="font-serif text-cream-300/80 text-lg leading-loose">
-                            The Dhamma School, established as an integral pillar of the temple's mission, has transformed the lives of thousands of children, who now serve their communities across Sri Lanka and around the world.
+                            The Dhamma School, established as an integral pillar of the temple&apos;s mission, has transformed the lives of thousands of children, who now serve their communities across Sri Lanka and around the world.
                         </p>
 
-                        {/* Decorative quote */}
+                        {/* Decorative quote - FIXED: escaped quotes */}
                         <div className="pl-6 border-l-2 border-gold-400/50 py-2">
                             <p className="font-serif italic text-gold-300/90 text-xl leading-relaxed">
-                                "Thousands of lamps can be lit from a single candle, and the life of the candle will not be shortened."
+                                &quot;Thousands of lamps can be lit from a single candle, and the life of the candle will not be shortened.&quot;
                             </p>
                             <p className="font-sans text-xs tracking-widest text-gold-400/60 mt-2 uppercase">— The Buddha</p>
                         </div>
@@ -213,14 +212,14 @@ export default function TempleSection() {
                     </div>
                 </div>
 
-                {/* Temple location / address block - UPDATED */}
+                {/* Temple location / address block */}
                 <div className="mt-8 reveal text-center">
                     <div className="inline-block border-gold-glow rounded-2xl px-10 py-6 bg-maroon-700/30 hover:bg-maroon-700/40 transition-all duration-300">
                         <p className="font-sans text-xs tracking-widest text-gold-400/70 uppercase mb-2">Location</p>
                         <p className="font-sinhala text-gold-200 text-xl mb-1">ශ්‍රී සම්බුද්ධාලෝක විහාරය, කහතුඩුව</p>
                         <p className="font-serif text-cream-300 text-lg">Sri Sambuddhaloka Temple, Kahathuduwa, Western Province, Sri Lanka</p>
 
-                        {/* Google Maps Link - Updated for Kahathuduwa */}
+                        {/* Google Maps Link */}
                         <a
                             href="https://maps.app.goo.gl/tzF61yoUQw36V44g8?g_st=aw"
                             target="_blank"

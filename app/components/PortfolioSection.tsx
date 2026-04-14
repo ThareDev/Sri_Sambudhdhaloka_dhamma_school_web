@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 // Import your 10 JPEG images
 import img1 from '@/public/gallery/event-1.jpeg'
@@ -21,7 +21,7 @@ interface PortfolioItem {
     category: PortfolioCategory
     caption: string
     year: string
-    image: any
+    image: StaticImageData  // Fixed: Changed from 'any' to proper type
 }
 
 const portfolioItems: PortfolioItem[] = [
@@ -39,12 +39,7 @@ const portfolioItems: PortfolioItem[] = [
 
 const categories = ['All', 'Events', 'Students', 'Temple']
 
-const categoryColors: Record<PortfolioCategory, string> = {
-    Events: 'from-maroon-600 to-maroon-800',
-    Students: 'from-gold-600 to-gold-800',
-    Temple: 'from-saffron-400 to-saffron-500',
-}
-
+// Removed unused categoryColors
 const categoryBadgeColors: Record<PortfolioCategory, string> = {
     Events: 'bg-maroon-600/80 text-cream-100',
     Students: 'bg-gold-600/80 text-maroon-900',
@@ -83,7 +78,7 @@ export default function PortfolioSection() {
                     <h2 className="font-display text-5xl sm:text-6xl gold-shimmer mb-4">Photo Gallery</h2>
                     <p className="font-sinhala text-gold-300/70 text-xl mb-6">ශ්‍රී සම්බුද්ධාලෝකයේ ස්මරණ</p>
                     <p className="font-serif italic text-cream-300/70 text-xl max-w-2xl mx-auto">
-                        Glimpses of devotion, celebration, and learning from our temple's storied life.
+                        Glimpses of devotion, celebration, and learning from our temple&apos;s storied life.
                     </p>
                 </div>
 
